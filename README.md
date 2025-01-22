@@ -1,6 +1,8 @@
 # covid-twitter-drug
 This repository contains related code and data of the paper Re-examing COVID-19 drug discussions on Twitter with large language models and co-occurrence networks. We thank all the contributors.
 
+![image](https://github.com/zju-liwanxin/covid-twitter-drug/blob/main/Flowchart.jpg)
+
 The study workflow is organized in three primary stages: data collection, development of an NLP pipeline, and subsequent data analysis using the constructed pipeline. Initially, we curated a dataset of English tweets related to COVID-19. After a preprocessing phase that excluded tweets with URLs, an NLP pipeline was developed to extract and normalize the drugs/diseases mentioned in these tweets. Finally, we examined the time trends of drug mentions, public sentiment, and discussion topics towards drugs, as well as the co-occurrence network of drug-drug and drug-disease pairs. Ethical approval for this study was granted by the Institutional Review Board of Zhejiang University.
 
 The data collection was finished through Tweets IDs from https://github.com/echen102/COVID-19-TweetIDs.
