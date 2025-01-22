@@ -1,6 +1,14 @@
 # covid-twitter-drug
 This repository contains related code and data of the paper Re-examing COVID-19 drug discussions on Twitter with large language models and co-occurrence networks. We thank all the contributors.
 
+The study workflow is organized in three primary stages: data collection, development of an NLP pipeline, and subsequent data analysis using the constructed pipeline. Initially, we curated a dataset of English tweets related to COVID-19. After a preprocessing phase that excluded tweets with URLs, an NLP pipeline was developed to extract and normalize the drugs/diseases mentioned in these tweets. Finally, we examined the time trends of drug mentions, public sentiment, and discussion topics towards drugs, as well as the co-occurrence network of drug-drug and drug-disease pairs. Ethical approval for this study was granted by the Institutional Review Board of Zhejiang University.
+
+The data collection was finished through Tweets IDs from https://github.com/echen102/COVID-19-TweetIDs.
+
+The datasets and model for the NLP pipeline (i.e.,NER and TSA models) and the application are public available at:  https://github.com/YLab-Open/METS-CoV
+
+The subsequent data analysis was performed in the following order:
+
 3_drugfilter.ipynb: Used to screen out drug-related tweets from tweets that have already been identified by the CT-BERT-NER, subsequent drug tweet merges were done manually and thus without code rendering.
 
 5_five_drugs.ipynb: Used to merge the tweets belonging to a certain drug according to the list of the colloquial drug expressions and their standardized concepts (i.e., drug trade names, chemical names, and generic names) found on Wikipedia, and took the tweets of the top 5 drugs, and then extracted the corresponding frequency and sentiment tendencies and summarize them into a dataframes over time.
